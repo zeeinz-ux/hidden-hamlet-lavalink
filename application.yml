@@ -10,11 +10,12 @@ plugins:
     allowSearch: true
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
-    clients: # 🌟 INI DIA YANG BIKIN ANTI-BLOCK YT NYALA
+    clients: 
       - ANDROID_VR
       - TVHTML5_SIMPLY
+      - WEB # 🌟 Tambahkan WEB di sini
     oauth:
-      enabled: false
+      enabled: true # 🌟 UBAH JADI true UNTUK MENGAKTIFKAN LOGIN
       skipInitialization: false
 
   lavasrc:
