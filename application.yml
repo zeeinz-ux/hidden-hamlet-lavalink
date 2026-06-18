@@ -34,7 +34,7 @@ plugins:
       vkmusic: false
       tidal: false
       qobuz: false
-      ytdlp: false
+      ytdlp: true
       jiosaavn: false
     lyrics-sources:
       spotify: false
