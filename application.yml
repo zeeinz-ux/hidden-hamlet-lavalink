@@ -4,11 +4,11 @@ server:
   
 lavalink:
   plugins:
-    # Memasang plugin YouTube v4 resmi karena v4 mewajibkan plugin terpisah
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.1"
       repository: "https://maven.lavalink.dev/releases"
   server:
-    password: "KetikPasswordRahasiaLuDisini" # 👈 GANTI DENGAN PASSWORD BEBAS LU
+    # 👇 Mengambil token secara dinamis dari Env Var bernama LAVALINK_PASSWORD
+    password: "${LAVALINK_PASSWORD}" 
     sources:
       youtube: true
       soundcloud: true
