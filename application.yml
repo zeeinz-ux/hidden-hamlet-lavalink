@@ -15,7 +15,8 @@ plugins:
       - TVHTML5_SIMPLY
       - WEB # 🌟 Tambahkan WEB di sini
     oauth:
-      enabled: true # 🌟 UBAH JADI true UNTUK MENGAKTIFKAN LOGIN
+      enabled: true
+      refreshToken: "${YOUTUBE_REFRESH_TOKEN}"
       skipInitialization: false
 
   lavasrc:
