@@ -10,7 +10,7 @@ lavalink:
     # 👇 Mengambil token secara dinamis dari Env Var bernama LAVALINK_PASSWORD
     password: "${LAVALINK_PASSWORD}" 
     sources:
-      youtube: true
+      youtube: false
       soundcloud: true
       bandcamp: true
       twitch: true
