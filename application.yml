@@ -1,0 +1,49 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+  
+lavalink:
+  plugins:
+    # Memasang plugin YouTube v4 resmi karena v4 mewajibkan plugin terpisah
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.1"
+      repository: "https://maven.lavalink.dev/releases"
+  server:
+    password: "KetikPasswordRahasiaLuDisini" # 👈 GANTI DENGAN PASSWORD BEBAS LU
+    sources:
+      youtube: true
+      soundcloud: true
+      bandcamp: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+    filters:
+      volume: true
+      equalizer: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      distortion: true
+      rotation: true
+      channelMix: true
+      lowPass: true
+    bufferDurationMs: 400
+    youtubePlaylistLoadLimit: 6
+    youtubeSearchLoadLimit: 25
+    soundcloudSearchLoadLimit: 25
+    gc-warnings: true
+
+logging:
+  file:
+    path: ./logs/lavalink.log
+  level:
+    root: INFO
+    lavalink: INFO
+
+  request:
+    enabled: false
+    includeClientInfo: false
+    includeHeaders: false
+    includeQueryString: false
+    includePayload: false
+    maxPayloadLength: 10000
