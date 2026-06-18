@@ -10,10 +10,11 @@ plugins:
     allowSearch: true
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
-    clients: # 🌟 UPDATE LIST-NYA JADI SEPERTI INI:
-      - TVHTML5        # 🌟 WAJIB ADA! Ini client utama yang bakal make Token OAuth lu
-      - ANDROID_VR     # (Biar tetep ada backup)
-      - TVHTML5_SIMPLY # (Biar tetep ada backup)
+    clients:
+     - TVHTML5
+     - WEB
+     - ANDROID_VR
+     - TVHTML5_SIMPLY
     oauth:
       enabled: true
       refreshToken: "${YOUTUBE_REFRESH_TOKEN}"
