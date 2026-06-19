@@ -30,11 +30,11 @@ plugins:
       deezer: false
       yandexmusic: false
       flowerytts: false
-      youtube: true
+      youtube: false      # 🌟 GANTI JADI FALSE (Biar gak bentrok sama youtube-plugin)
       vkmusic: false
       tidal: false
       qobuz: false
-      ytdlp: true
+      ytdlp: false        # 🌟 GANTI JADI FALSE (Ini yang bikin NullPointerException/Crash bray!)
       jiosaavn: false
     lyrics-sources:
       spotify: false
