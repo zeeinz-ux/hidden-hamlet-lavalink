@@ -11,9 +11,11 @@ plugins:
     allowDirectPlaylistIds: true
     clients:
       - TV               # 🌟 INI YANG BENER buat OAuth, ganti dari TVHTML5
-      - WEB               # fallback solid, support search/playlist/mix
-      - ANDROID_VR        # fallback
-      - TVHTML5_SIMPLY    # fallback
+      - MWEB             # 🌟 TAMBAH — ringan, jarang kena flag bot YouTube
+      - WEB              # fallback solid, support search/playlist/mix
+      - IOS              # 🌟 TAMBAH — stabil, dukung OAuth
+      - ANDROID_VR       # fallback
+      - TVHTML5_SIMPLY   # fallback
     oauth:
       enabled: true
       refreshToken: "${YOUTUBE_REFRESH_TOKEN}"
