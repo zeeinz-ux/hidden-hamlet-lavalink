@@ -11,16 +11,10 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     clients:
-      - TV
-      - MWEB
-      - WEB
-      - IOS
+      - MUSIC
       - ANDROID_VR
-      - TVHTML5_SIMPLY
-    oauth:
-      enabled: true
-      refreshToken: "${YOUTUBE_REFRESH_TOKEN}"
-      skipInitialization: false
+      - WEB
+      - WEBEMBEDDED
   lavasrc:
     providers:
       - 'spsearch:"%ISRC%"'
