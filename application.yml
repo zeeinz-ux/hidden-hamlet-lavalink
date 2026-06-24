@@ -1,5 +1,6 @@
+# Wrote application.yml
 server:
-  port: 8080 # 🌟 DISESUAIKAN BIAR PAS SAMA PORT RENDER LU
+  port: 8080
   address: 0.0.0.0
   http2:
     enabled: false
@@ -10,33 +11,33 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     clients:
-      - TV               # 🌟 INI YANG BENER buat OAuth, ganti dari TVHTML5
-      - MWEB             # 🌟 TAMBAH — ringan, jarang kena flag bot YouTube
-      - WEB              # fallback solid, support search/playlist/mix
-      - IOS              # 🌟 TAMBAH — stabil, dukung OAuth
-      - ANDROID_VR       # fallback
-      - TVHTML5_SIMPLY   # fallback
+      - TV
+      - MWEB
+      - WEB
+      - IOS
+      - ANDROID_VR
+      - TVHTML5_SIMPLY
     oauth:
       enabled: true
       refreshToken: "${YOUTUBE_REFRESH_TOKEN}"
       skipInitialization: false
   lavasrc:
     providers:
-      - 'spsearch:"%ISRC%"'   # 🌟 Spotify dulu buat ISRC match
-      - "spsearch:%QUERY%"    # 🌟 Spotify jadi prioritas utama
-      - "scsearch:%QUERY%"    # SoundCloud kedua
-      - "ytsearch:%QUERY%"    # YouTube paling terakhir, cuma fallback
+      - 'spsearch:"%ISRC%"'
+      - "spsearch:%QUERY%"
+      - "scsearch:%QUERY%"
+      - "ytsearch:%QUERY%"
     sources:
       spotify: true
       applemusic: false
       deezer: false
       yandexmusic: false
       flowerytts: false
-      youtube: false      # 🌟 GANTI JADI FALSE (Biar gak bentrok sama youtube-plugin)
+      youtube: false
       vkmusic: false
       tidal: false
       qobuz: false
-      ytdlp: false        # 🌟 GANTI JADI FALSE (Ini yang bikin NullPointerException/Crash bray!)
+      ytdlp: false
       jiosaavn: false
     lyrics-sources:
       spotify: false
@@ -46,8 +47,8 @@ plugins:
       vkmusic: false
       lrcLib: false
     spotify:
-      clientId: "${SPOTIFY_CLIENT_ID}"      # 🌟 ISI INI, jangan biarin kosong
-      clientSecret: "${SPOTIFY_CLIENT_SECRET}" # 🌟 ISI INI JUGA
+      clientId: "${SPOTIFY_CLIENT_ID}"
+      clientSecret: "${SPOTIFY_CLIENT_SECRET}"
       countryCode: "US"
       playlistLoadLimit: 6
       albumLoadLimit: 6
@@ -66,13 +67,10 @@ lavalink:
     - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.1"
       snapshot: false
       repository: "https://maven.lavalink.dev/releases"
-    - dependency: "com.github.topi314.lavasearch:lavasearch-plugin:1.0.0"
-      snapshot: false
-      repository: "https://maven.lavalink.dev/releases"
   server:
-    password: "${LAVALINK_PASSWORD}" # 🌟 TETEP AMAN AMBIL DARI ENV VARIABLE RENDER
+    password: "${LAVALINK_PASSWORD}"
     sources:
-      youtube: false # 🌟 WAJIB FALSE BIAR DI-HANDLE SAMA PLUGIN DI ATAS
+      youtube: false
       bandcamp: true
       soundcloud: true
       twitch: true
